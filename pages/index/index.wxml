@@ -1,9 +1,9 @@
 <view class='container flex-column'>
     <text class='title' selectable='false'>经贸档案查询</text>
     <view class='search flex-row'>
-      <input class='search-ipt' type="text" value='{{department}}' placeholder='请输入您的就读系别' placeholder-class='placeholder' focus bindinput='expressInput'/>
-      <input class='search-ipt' type="number" value='{{graduationYear}}' placeholder='请输入您的毕业年份' placeholder-class='placeholder' focus bindinput='expressInput'/>
-      <input class='search-ipt' type="text" value='{{name}}' placeholder='请输入您的姓名' placeholder-class='placeholder' focus bindinput='expressInput'/>
+      <input class='search-ipt' type="text" value='{{department}}' placeholder='请输入您的就读系别' placeholder-class='placeholder' focus bindinput='departmentInput'/>
+      <input class='search-ipt' type="number" value='{{graduationYear}}' placeholder='请输入您的毕业年份' placeholder-class='placeholder' focus bindinput='graduationYearInput'/>
+      <input class='search-ipt' type="text" value='{{name}}' placeholder='请输入您的姓名' placeholder-class='placeholder' focus bindinput='nameInput'/>
     </view>
     <button class='search-tap' loading='{{loading}}' bindtap='searchTap'>档案查询</button>
     <!--档案列表  -->

@@ -23,9 +23,9 @@ Page({
       loading: true,
     } ) 
     wx.request({
-      url:'https://nx.abu.pub/get_msg',
+      url:'https://nx.abu.pub:50443/get_msg',
       data:{
-        department: this.data.departmentv,
+        department: this.data.department,
         graduationYear: this.data.graduationYear,
         name: this.data.name
       },
@@ -42,12 +42,19 @@ Page({
       }.bind(this),
     })
   },
-
-  expressInput:function(e){
+  departmentInput:function(e){
     this.setData({
-      department:e.detail.department,
-      graduationYear:e.detail.graduationYear,
-      name:e.detail.name
+      department:e.detail.value
+    })
+  },
+  graduationYearInput:function(e){
+    this.setData({
+      graduationYear:e.detail.value
+    })
+  },
+  nameInput:function(e){
+    this.setData({
+      name:e.detail.value
     })
   }
 })
